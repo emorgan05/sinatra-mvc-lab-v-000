@@ -5,7 +5,19 @@ class PigLatinizer
     @user_phrase = user_phrase
   end
 
-  def piglatinize(user_phrase)
+  def piglatinize(word)
+      if word[0].scan(/[aeiouAEIOU]/) != []
+        word += "way"
+      else
+        index = word.index(/[aeiou]/)
+        word_core = word.slice(index..word.size)
+        word_start = word.slice(0..index - 1)
+        pig_word = word_core + word_start + "ay"
+      end
+    end
+  end
+
+  def to_pig_latin(user_phrase)
     text_array = user_phrase.split(" ")
     piglatin = []
 
