@@ -6,12 +6,12 @@ class PigLatinizer
   end
 
   def piglatinize(user_phrase)
-    text_array = user_phrase.split(" ").downcase
+    text_array = user_phrase.split(" ")
     binding.pry
     piglatin = []
 
     text_array.each do |word|
-      if word[0].scan(/[aeiou]/) != []
+      if word[0].scan(/[aeiouAEIOU]/) != []
         word += "way"
         piglatin << word
       else
