@@ -10,7 +10,7 @@ class PigLatinizer
     piglatin = []
 
     text_array.each do |word|
-      if word[0].scan(/[aeiou]/)
+      if word[0].scan(/[aeiou]/) != []
         word += "way"
         piglatin << word
       else
