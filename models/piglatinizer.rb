@@ -7,6 +7,7 @@ class PigLatinizer
 
   def piglatinize(user_phrase)
     text_array = user_phrase.split(" ")
+    binding.pry
     piglatin = []
 
     text_array.each do |word|
