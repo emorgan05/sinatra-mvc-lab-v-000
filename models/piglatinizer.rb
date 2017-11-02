@@ -6,7 +6,7 @@ class PigLatinizer
   end
 
   def piglatinize(user_phrase)
-    text_array = user_phrase.split(" ")
+    text_array = user_phrase.split(" ").downcase
     binding.pry
     piglatin = []
 
