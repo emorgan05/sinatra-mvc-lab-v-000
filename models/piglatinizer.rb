@@ -2,7 +2,7 @@ class PigLatinizer
   attr_reader :user_phrase
 
   def initialize
-    @user_phrase = user_phrase.downcase
+    @user_phrase = user_phrase
   end
 
   def piglatinize
