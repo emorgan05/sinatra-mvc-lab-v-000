@@ -5,7 +5,7 @@ class PigLatinizer
     @user_phrase = user_phrase
   end
 
-  def piglatinize
+  def piglatinize(user_phrase)
     text_array = user_phrase.split(" ")
     piglatin = []
 
